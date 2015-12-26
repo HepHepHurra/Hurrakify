@@ -1,3 +1,3 @@
 # Hurrakify #
 
-This is a wordpress plugin. To change the language content please check the **lang.php** file.
+You will find the working Plugin over at the Wordpress Plugin Site: https://de.wordpress.org/plugins/hurrakify/
