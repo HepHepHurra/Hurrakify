@@ -23,7 +23,7 @@ Thank you for wanting to contribute to making Hurrakify awesome.
 You are not a programmer but like the idea of Plain Language and Easy-to-read. 
 
 * You are welcome to wright Easy-to-read texts
- * in [Gemran](http://hurraki.de)
+ * in [German](http://hurraki.de)
  * in [English](http://hurraki.org/english)
  * in [Spanisch](http://hurraki.org/espanol)
 * You like to taking pictures. There is also a Wiki for Easy-to-read pictures at [HDrei](http://hdrei.org)
