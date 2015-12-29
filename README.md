@@ -15,7 +15,7 @@ Thank you for wanting to contribute to making Hurrakify awesome.
 ### Translations ###
 
 * Translation for this readme. Since Hurrakify is availabale in Espanol and German as well, this readme should be translated in [Espanol](https://github.com/Hurraki/Hurrakify/blob/master/READMEES.md) and [German](https://github.com/Hurraki/Hurrakify/blob/master/READMEDE.md). 
-* Translation for the wordpress readme. Right now there is only a German descrtiption site over at [Wordpress Plugin Site](https://wordpress.org/plugins/hurrakify/). If you are speaking German and English or/and Spanisch feel free to translate the wprdpress description site.
+* Translation for the wordpress readme. Right now there is only a German descrtiption site over at the [Wordpress Plugin Site](https://wordpress.org/plugins/hurrakify/). If you are speaking German and English or/and Spanisch feel free to translate the wprdpress description site.
 * You like to make videos and screencasts? Help to make the Help Videos available in English and Espanol as well. [Here](https://www.youtube.com/watch?v=bs9Rs7Yf2Lw) and [here](https://www.youtube.com/watch?v=EHcKjD330nQ) you can find the actual videos.
 
 ### Other ways to contribute ###
