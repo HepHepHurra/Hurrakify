@@ -55,7 +55,7 @@ function func_basic_settings_page()
                     <th scope="row"><label for="blogname"><?php echo $lang["tooltip_on_title"][$locale]?></label></th>
                     <td>
                         <select name="hurraki_tooltip_apply_to" id="hurraki_tooltip_apply_to">
-                            <option value="add_hurraki_tooltip_everything">All</option>
+                            <option value="add_hurraki_tooltip_everything"><?php _e('All', 'hurrakify'); ?></option>
                             <?php
 
                             $types=get_post_types();
@@ -83,7 +83,7 @@ function func_basic_settings_page()
                 </tr>
                 </tbody>
             </table>
-            <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes"></p>
+            <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'hurrakify'); ?>"></p>
         </form>
     </div>
 <?php
