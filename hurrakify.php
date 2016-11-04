@@ -26,7 +26,7 @@ function hurrakifyEnqueueScripts(){
 
 
 function hurraki_tooltip_setup_menu(){
-    add_menu_page('Hurrakify Settings','Hurrakify',10,'hurraki_tooltip_functions.php', 'func_basic_settings_page' );
+    add_menu_page('Hurrakify Settings','Hurrakify','manage_options','hurraki_tooltip_functions.php', 'func_basic_settings_page' );
 }
 
 function hurraki_tooltip_plugin_activate($plugin) {
