@@ -7,7 +7,6 @@ Plugin URI: https://wordpress.org/plugins/hurrakify/
 Version: 2
 */
 
-//error_reporting(E_ALL);
 require_once("lang.php");
 require_once("hurrakify_tooltip_functions.php");
 
@@ -15,11 +14,15 @@ add_action('admin_menu', 'hurraki_tooltip_setup_menu');
 add_action('admin_init', 'register_hurraki_tooltip');
 add_action('activated_plugin', 'hurraki_tooltip_plugin_activate' );
 
-wp_enqueue_style('hurraki_tooltip_style', "/wp-content/plugins/Hurrakify/lib/tooltipster/css/tooltipster.css");
+add_action('wp_enqueue_scripts', 'hurrakifyEnqueueScripts');
 
-wp_enqueue_script('hurraki_tooltip_lib_tooltipster_script', '/wp-content/plugins/Hurrakify/lib/tooltipster/js/jquery.tooltipster.js', 'hurraki_tooltip_script', 1.0, true);
+function hurrakifyEnqueueScripts(){
+    wp_enqueue_style('hurraki_tooltip_style', "/wp-content/plugins/Hurrakify/lib/tooltipster/css/tooltipster.css");
 
-wp_enqueue_script('hurraki_tooltip_script', '/wp-content/plugins/Hurrakify/javascript/hurraki_tooltip_script.js', 'hurraki_tooltip_script', 1.0, true);
+    wp_enqueue_script('hurraki_tooltip_lib_tooltipster_script', '/wp-content/plugins/Hurrakify/lib/tooltipster/js/jquery.tooltipster.js', 'hurraki_tooltip_script', 1.0, true);
+
+    wp_enqueue_script('hurraki_tooltip_script', '/wp-content/plugins/Hurrakify/javascript/hurraki_tooltip_script.js', 'hurraki_tooltip_script', 1.0, true);
+}
 
 
 function hurraki_tooltip_setup_menu(){
