@@ -114,4 +114,3 @@ add_filter('the_content','theme_slug_filter_the_content', 10000);
 
 
 add_action('wp_footer','hurraki_tooltip_checkDate__');
-?>

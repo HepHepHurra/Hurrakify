@@ -154,4 +154,3 @@ function get_data_url($url)
 
     return $curl_response;
 }
-?>
