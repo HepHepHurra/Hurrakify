@@ -17,12 +17,15 @@ add_action('activated_plugin', 'hurraki_tooltip_plugin_activate' );
 
 add_action('wp_enqueue_scripts', 'hurrakifyEnqueueScripts');
 
-function hurrakifyEnqueueScripts(){
-    wp_enqueue_style('hurraki_tooltip_style', "/wp-content/plugins/Hurrakify/lib/tooltipster/css/tooltipster.css");
 
-    wp_enqueue_script('hurraki_tooltip_lib_tooltipster_script', '/wp-content/plugins/Hurrakify/lib/tooltipster/js/jquery.tooltipster.js', 'hurraki_tooltip_script', 1.0, true);
+function hurrakifyEnqueueScripts() {
+$hurrakifyPluginDirUrl = plugin_dir_url( __FILE__ );
 
-    wp_enqueue_script('hurraki_tooltip_script', '/wp-content/plugins/Hurrakify/javascript/hurraki_tooltip_script.js', 'hurraki_tooltip_script', 1.0, true);
+    wp_enqueue_style('hurraki_tooltip_style', $hurrakifyPluginDirUrl . "lib/tooltipster/css/tooltipster.css");
+
+    wp_enqueue_script('hurraki_tooltip_lib_tooltipster_script', $hurrakifyPluginDirUrl . 'lib/tooltipster/js/jquery.tooltipster.js', 'hurraki_tooltip_script', 1.0, true);
+
+    wp_enqueue_script('hurraki_tooltip_script', $hurrakifyPluginDirUrl . 'javascript/hurraki_tooltip_script.js', 'hurraki_tooltip_script', 1.0, true);
 }
 
 add_action('plugins_loaded', 'wan_load_textdomain');
