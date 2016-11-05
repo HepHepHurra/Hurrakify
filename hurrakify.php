@@ -5,6 +5,7 @@ Description: Hurrakify links automatically difficult words to entries in plain l
 Author: Hep Hep Hurra (HHH)
 Plugin URI: https://wordpress.org/plugins/hurrakify/
 Version: 2
+Text Domain: hurrakify
 */
 
 require_once("lang.php");
@@ -22,6 +23,11 @@ function hurrakifyEnqueueScripts(){
     wp_enqueue_script('hurraki_tooltip_lib_tooltipster_script', '/wp-content/plugins/Hurrakify/lib/tooltipster/js/jquery.tooltipster.js', 'hurraki_tooltip_script', 1.0, true);
 
     wp_enqueue_script('hurraki_tooltip_script', '/wp-content/plugins/Hurrakify/javascript/hurraki_tooltip_script.js', 'hurraki_tooltip_script', 1.0, true);
+}
+
+add_action('plugins_loaded', 'wan_load_textdomain');
+function wan_load_textdomain() {
+    load_plugin_textdomain( 'hurrakify', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
 }
 
 

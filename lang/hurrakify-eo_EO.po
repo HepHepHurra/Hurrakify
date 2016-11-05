@@ -1,0 +1,72 @@
+hurrakify-eo.pomsgid ""
+msgstr ""
+"Project-Id-Version: Hurrakify\n"
+"POT-Creation-Date: 2016-11-05 15:14+0200\n"
+"PO-Revision-Date: 2016-11-05 15:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: hurrakify_tooltip_functions.php:21
+msgid ""
+"<p>Your server don't support <strong>cUrl</strong> which is must to use this "
+"plugin. Please activate  <strong>cUrl</strong> unless this plugin will not "
+"work</p>"
+msgstr ""
+"<p>Your server don't support<strong>cUrl</strong> which is must to use this "
+"plugin. Please activate <strong>cUrl</strong> unless this plugin will not "
+"work</p>"
+
+#: hurrakify_tooltip_functions.php:29
+msgid "Hurrakify Settings"
+msgstr "Configuraciones de Hurrakify"
+
+#: hurrakify_tooltip_functions.php:30
+msgid "Please update settings as per your requirement."
+msgstr "Por favor adapte las configuraciones a sus necesidades."
+
+#: hurrakify_tooltip_functions.php:36
+msgid "Select a Easy-to-read Wiki"
+msgstr "Selecciona un Wiki en lenguaje llano"
+
+#: hurrakify_tooltip_functions.php:49
+msgid "Hurrakify will link to words in this Wiki."
+msgstr "Hurrakify enlazará palabras en este Wiki."
+
+#: hurrakify_tooltip_functions.php:55
+msgid "Choose an area"
+msgstr "Selecciona el ámbito"
+
+#: hurrakify_tooltip_functions.php:58
+msgid "All"
+msgstr ""
+
+#: hurrakify_tooltip_functions.php:72
+msgid ""
+"Choose the area (posts, pages etc.) in which Hurrakify should link difficult "
+"words."
+msgstr ""
+"Selecciona el ámbito (contribuciones, páginas etc.) en que Hurrakify debe "
+"enlazar palabras difíciles."
+
+#: hurrakify_tooltip_functions.php:78
+msgid "Maximum Tooltips"
+msgstr "Máximo de tooltips"
+
+#: hurrakify_tooltip_functions.php:81
+msgid "How many words should Hurrakify link at most? (Default setting is 10)"
+msgstr ""
+"Cuántas palabras debe Hurrakify enlazar como máximo? (Configuración estándar "
+"es 10)"
+
+#: hurrakify_tooltip_functions.php:86
+msgid "Save Changes"
+msgstr ""
