@@ -6,7 +6,6 @@ function func_basic_settings_page()
 
 	$m=explode("_",get_locale());	
     $locale=$m[0];
-var_dump(get_locale());
     if($locale=="es"){
         $locale="eo";
     }

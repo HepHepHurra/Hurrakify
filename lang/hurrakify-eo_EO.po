@@ -1,4 +1,4 @@
-hurrakify-eo.pomsgid ""
+msgid ""
 msgstr ""
 "Project-Id-Version: Hurrakify\n"
 "POT-Creation-Date: 2016-11-05 15:14+0200\n"
