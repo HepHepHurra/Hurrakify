@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', 'hurrakifyEnqueueScripts');
 
 
 function hurrakifyEnqueueScripts() {
-$hurrakifyPluginDirUrl = plugin_dir_url( __FILE__ );
+    $hurrakifyPluginDirUrl = plugin_dir_url( __FILE__ );
 
     wp_enqueue_style('hurraki_tooltip_style', $hurrakifyPluginDirUrl . "lib/tooltipster/css/tooltipster.css");
 
@@ -82,38 +82,22 @@ function add_default_hurraki_tooltip() {
 
 function theme_slug_filter_the_content( $content ) {
 
-    $wiki=get_option('hurraki_tooltip_wiki');
-    $limit=get_option('hurraki_tooltip_max_word',10);
-    $keywords=json_decode(get_option('hurraki_tooltip_key_words_'.$wiki));
+    $type = get_option('hurraki_tooltip_apply_to');
 
-    $type=get_option('hurraki_tooltip_apply_to');
+    if ($type == get_post_type() || $type == "add_hurraki_tooltip_everything") {
 
-    $counter=0;
-    $i=0;
+        $wiki     = get_option('hurraki_tooltip_wiki');
+        $keywords = json_decode(get_option('hurraki_tooltip_key_words_' . $wiki));
 
-    $m=array();
-    $toSearch="";
+        // split array to prevent "regular expression is too large" error
+        $chunks = array_chunk($keywords, 50);
 
-    if($type==get_post_type() || $type=="add_hurraki_tooltip_everything"){
-        foreach($keywords as &$keyword) {
-            if($counter<$limit){
-
-                //$content=preg_replace('%(?=.*?<.*?/>)'.$keyword.'%im', "<span class='hurraki_tooltip' data-title='".$keyword."' style='border-bottom:2px dotted #888;'>\$0</span>", $content, -1, $i);
-
-                $m[]=$keyword;
-
-                if($i>0){
-                    $counter=$counter+1;
-                }
-            }
+        foreach ($chunks as $keywords_chunk) {
+            $search  = "~<[^>]*>(*SKIP)(*F)|" . implode("|", $keywords_chunk) . "~";
+            $replace ="<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
+            $content = preg_replace($search, $replace, $content);
         }
 
-        $toSearch="~<[^>]*>(*SKIP)(*F)|".implode("|", $m)."~";
-        $repl= "<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
-
-       // echo $toSearch;
-
-        $content=preg_replace($toSearch,$repl,$content);
     }
 
     return $content;
