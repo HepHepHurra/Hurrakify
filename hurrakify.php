@@ -80,6 +80,10 @@ function add_default_hurraki_tooltip() {
     echo "</style>";
 }
 
+function valueToLower (&$value){
+    $value = strtolower($value);
+}
+
 function theme_slug_filter_the_content( $content ) {
 
     $type = get_option('hurraki_tooltip_apply_to');
@@ -88,16 +92,28 @@ function theme_slug_filter_the_content( $content ) {
 
         $wiki     = get_option('hurraki_tooltip_wiki');
         $keywords = json_decode(get_option('hurraki_tooltip_key_words_' . $wiki));
+        $limit=get_option('hurraki_tooltip_max_word',10);
 
-        // split array to prevent "regular expression is too large" error
-        $chunks = array_chunk($keywords, 50);
+        // Get all text words except HTML tags
+        $contentWords = str_word_count(strip_tags($content), 1);
 
-        foreach ($chunks as $keywords_chunk) {
-            $search  = "~<[^>]*>(*SKIP)(*F)|" . implode("|", $keywords_chunk) . "~";
+        // Move all values to same register
+        array_walk($contentWords, 'valueToLower');
+        array_walk($keywords, 'valueToLower');
+
+        // Find words those can be replaced
+        $keywordsInContent = array_intersect_key(array_count_values($contentWords), array_flip($keywords));
+
+        // Sort, most used on top
+        arsort($keywordsInContent);
+        // Limit apply
+        $keywordsInContent = array_slice($keywordsInContent, 0 ,$limit);
+
+        foreach (array_keys($keywordsInContent) as $keyword) {
+            $search  = '/(?:\b)(' . $keyword . ')(\b)(?!(?:[^<]+)?>)/i';
             $replace ="<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
-            $content = preg_replace($search, $replace, $content);
+            $content = preg_replace($search, $replace, $content, 1);
         }
-
     }
 
     return $content;
