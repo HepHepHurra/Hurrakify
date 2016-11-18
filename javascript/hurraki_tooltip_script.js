@@ -11,8 +11,12 @@ jQuery(document).ready(function() {
 
                 jQuery.ajax({
                     type: 'GET',
-                    dataType:'jsonp',
-                    url: hurraki_tooltip.hurraki_tooltip_wiki_api+jQuery(this).attr("data-title"),
+                    dataType:'json',
+                    url: hurraki.ajaxurl,
+                    data: {
+                        action: 'hurraki_tooltip_proxy',
+                        target: hurraki_tooltip.hurraki_tooltip_wiki_api+jQuery(this).attr("data-title"),
+                    },
                     success: function(data) {
 
                         var MoreLink='<a href="'+hurraki_tooltip.hurraki_tooltip_wiki+'/wiki/'+hurraki_tooltip.CurrentSelectedWord+'" target="_blank">'+hurraki_tooltip.read_more_button+'</a>';
@@ -24,9 +28,6 @@ jQuery(document).ready(function() {
                         replacedContents=replacedContents.replace(/<a\s+href=/gi, '<a target="_blank" href=')+"<br>"+MoreLink;
 
                         origin.tooltipster('content', replacedContents).data('ajax', 'cached');
-
-
-                        console.log(data)
                     }
                 });
             }

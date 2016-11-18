@@ -16,7 +16,14 @@ add_action('admin_init', 'register_hurraki_tooltip');
 add_action('activated_plugin', 'hurraki_tooltip_plugin_activate' );
 
 add_action('wp_enqueue_scripts', 'hurrakifyEnqueueScripts');
+add_action('wp_ajax_hurraki_tooltip_proxy', 'hurraki_tooltip_proxy');
+add_action('wp_ajax_nopriv_hurraki_tooltip_proxy', 'hurraki_tooltip_proxy');
 
+function hurraki_tooltip_proxy() {
+    $result = wp_remote_get(urldecode($_GET['target']));
+    echo $result['body'];
+	die;
+}
 
 function hurrakifyEnqueueScripts() {
     $hurrakifyPluginDirUrl = plugin_dir_url( __FILE__ );
@@ -26,6 +33,7 @@ function hurrakifyEnqueueScripts() {
     wp_enqueue_script('hurraki_tooltip_lib_tooltipster_script', $hurrakifyPluginDirUrl . 'lib/tooltipster/js/jquery.tooltipster.js', 'hurraki_tooltip_script', 1.0, true);
 
     wp_enqueue_script('hurraki_tooltip_script', $hurrakifyPluginDirUrl . 'javascript/hurraki_tooltip_script.js', 'hurraki_tooltip_script', 1.0, true);
+    wp_localize_script('hurraki_tooltip_script', 'hurraki', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
 
 add_action('plugins_loaded', 'wan_load_textdomain');
