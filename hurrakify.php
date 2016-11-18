@@ -118,7 +118,7 @@ function theme_slug_filter_the_content( $content ) {
         $keywordsInContent = array_slice($keywordsInContent, 0 ,$limit);
 
         foreach (array_keys($keywordsInContent) as $keyword) {
-            $search  = '/(?:\b)(' . $keyword . ')(\b)(?!(?:[^<]+)?>)/i';
+            $search  = '/\b(' . $keyword . ')\b(?!(?:[^<]+)?>)/i';
             $replace ="<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
             $content = preg_replace($search, $replace, $content, 1);
         }
