@@ -92,7 +92,7 @@ function func_basic_settings_page()
 function hurraki_tooltip_checkDate__()
 {
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    if (is_plugin_active('Hurrakify/hurrakify.php')){
+    if (is_plugin_active(dirname( plugin_basename(__FILE__) ) . '/hurrakify.php')){
 
         $hurraki_tooltip_key_words_last_update_time=get_option('hurraki_tooltip_key_words_last_update_time');
         $date1 = new DateTime(date('Y-m-d'));
