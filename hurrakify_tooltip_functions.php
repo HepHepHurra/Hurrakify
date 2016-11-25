@@ -22,7 +22,6 @@ function func_basic_settings_page()
     }
 
     $hurraki_tooltip_wiki=get_option('hurraki_tooltip_wiki','de');
-    $hurraki_tooltip_apply_to=get_option('hurraki_tooltip_apply_to','add_hurraki_tooltip_everything');
 ?>
     <div class="wrap">
         <h1><?php _e("Hurrakify Settings", 'hurrakify'); ?></h1>
@@ -48,31 +47,6 @@ function func_basic_settings_page()
                         <p class="description" id="tagline-description"><?php _e("Hurrakify will link to words in this Wiki.", 'hurrakify'); ?></p>
                     </td>
                 </tr>
-
-
-                <tr>
-                    <th scope="row"><label for="blogname"><?php _e("Choose an area", 'hurrakify'); ?></label></th>
-                    <td>
-                        <select name="hurraki_tooltip_apply_to" id="hurraki_tooltip_apply_to">
-                            <option value="add_hurraki_tooltip_everything"><?php _e('All', 'hurrakify'); ?></option>
-                            <?php
-
-                            $types=get_post_types();
-
-                            foreach ($types as $key => $value) {
-                                if($hurraki_tooltip_apply_to==$key){
-                                    echo '<option value="'.$key.'" selected="selected">'.ucfirst($value).'</option>';
-                                }else{
-                                    echo '<option value="'.$key.'">'.ucfirst($value).'</option>';
-                                }
-                            }
-                            ?>
-                        </select>
-                        <p class="description" id="tagline-description"><?php _e("Choose the area (posts, pages etc.) in which Hurrakify should link difficult words.", 'hurrakify'); ?></p>
-                    </td>
-                </tr>
-
-
                 <tr valign="top">
                     <th scope="row"><?php _e("Maximum Tooltips", 'hurrakify'); ?></th>
                     <td>

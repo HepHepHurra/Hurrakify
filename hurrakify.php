@@ -59,13 +59,11 @@ function updateOptionFields()
     update_option('hurraki_tooltip_key_words_last_update_time',date('Y-m-d'));
     update_option('hurraki_tooltip_wiki',"de");
     update_option('hurraki_tooltip_max_word',"10");
-    update_option('hurraki_tooltip_apply_to',"add_hurraki_tooltip_everything");
 }
 
 function register_hurraki_tooltip() {
     register_setting('hurraki-settings-group', 'hurraki_tooltip_wiki');
     register_setting('hurraki-settings-group', 'hurraki_tooltip_max_word');
-    register_setting('hurraki-settings-group', 'hurraki_tooltip_apply_to');
 
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_en');
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_eo');
@@ -94,10 +92,6 @@ function valueToLower (&$value){
 
 function theme_slug_filter_the_content( $content ) {
 
-    $type = get_option('hurraki_tooltip_apply_to');
-
-    if ($type == get_post_type() || $type == "add_hurraki_tooltip_everything") {
-
         $wiki     = get_option('hurraki_tooltip_wiki');
         $keywords = json_decode(get_option('hurraki_tooltip_key_words_' . $wiki));
         $limit=get_option('hurraki_tooltip_max_word',10);
@@ -122,7 +116,6 @@ function theme_slug_filter_the_content( $content ) {
             $replace ="<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
             $content = preg_replace($search, $replace, $content, 1);
         }
-    }
 
     return $content;
 }
