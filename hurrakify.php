@@ -90,32 +90,28 @@ function valueToLower (&$value){
     $value = strtolower($value);
 }
 
-function theme_slug_filter_the_content( $content ) {
+function theme_slug_filter_the_content($content)
+{
+    $wiki = get_option('hurraki_tooltip_wiki');
+    $keywords = json_decode(get_option('hurraki_tooltip_key_words_' . $wiki));
+    $limit = get_option('hurraki_tooltip_max_word', 10);
 
-        $wiki     = get_option('hurraki_tooltip_wiki');
-        $keywords = json_decode(get_option('hurraki_tooltip_key_words_' . $wiki));
-        $limit=get_option('hurraki_tooltip_max_word',10);
+    $foundCounter = 0;
 
-        // Get all text words except HTML tags
-        $contentWords = str_word_count(strip_tags($content), 1);
+    foreach ($keywords as $keyword) {
 
-        // Move all values to same register
-        array_walk($contentWords, 'valueToLower');
-        array_walk($keywords, 'valueToLower');
-
-        // Find words those can be replaced
-        $keywordsInContent = array_intersect_key(array_count_values($contentWords), array_flip($keywords));
-
-        // Sort, most used on top
-        arsort($keywordsInContent);
-        // Limit apply
-        $keywordsInContent = array_slice($keywordsInContent, 0 ,$limit);
-
-        foreach (array_keys($keywordsInContent) as $keyword) {
-            $search  = '/\b(' . $keyword . ')\b(?!(?:[^<]+)?>)/i';
-            $replace ="<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
-            $content = preg_replace($search, $replace, $content, 1);
+        if ($foundCounter >= $limit) {
+            break;
         }
+
+        $search = '/\b(' . $keyword . ')\b(?!(?:[^<]+)?>)/i';
+        $replace = "<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
+        $content = preg_replace($search, $replace, $content, 1, $count);
+
+        if ($count > 0) {
+            $foundCounter++;
+        }
+    }
 
     return $content;
 }
