@@ -104,7 +104,7 @@ function theme_slug_filter_the_content($content)
             break;
         }
 
-        $search = '/\b(' . $keyword . ')\b(?!(?:[^<]+)?>)/i';
+        $search = '/\b(' . addcslashes(addslashes($keyword), '/') . ')\b(?!(?:[^<]+)?>)/i';
         $replace = "<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
         $content = preg_replace($search, $replace, $content, 1, $count);
 
