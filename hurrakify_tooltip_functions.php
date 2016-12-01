@@ -6,7 +6,6 @@ function func_basic_settings_page()
 
 	$m=explode("_",get_locale());	
     $locale=$m[0];
-
     if($locale=="es"){
         $locale="eo";
     }
@@ -18,22 +17,21 @@ function func_basic_settings_page()
 
     if(!function_exists('curl_version')) {
 ?>
-        <div id="message" class="updated notice is-dismissible"><?php echo $lang["curl_error_mgs"][$locale]?><button type="button" class="notice-dismiss"><span class="screen-reader-text">.</span></button></div>
+        <div id="message" class="updated notice is-dismissible"><?php _e('<p>Your server don\'t support <strong>cUrl</strong> which is must to use this plugin. Please activate  <strong>cUrl</strong> unless this plugin will not work</p>'); ?><button type="button" class="notice-dismiss"><span class="screen-reader-text">.</span></button></div>
 <?php
     }
 
     $hurraki_tooltip_wiki=get_option('hurraki_tooltip_wiki','de');
-    $hurraki_tooltip_apply_to=get_option('hurraki_tooltip_apply_to','add_hurraki_tooltip_everything');
 ?>
     <div class="wrap">
-        <h1><?php echo $lang["settings_title"][$locale]?></h1>
-        <p><?php echo $lang["settings_description"][$locale]?></p>
+        <h1><?php _e("Hurrakify Settings", 'hurrakify'); ?></h1>
+        <p><?php _e("Please update settings as per your requirement.", 'hurrakify'); ?></p>
         <form method="post" action="options.php" novalidate="novalidate">
             <?php settings_fields( 'hurraki-settings-group' ); ?>
             <table class="form-table">
                 <tbody>
                 <tr>
-                    <th scope="row"><label for="blogname"><?php echo $lang["wiki_links_title"][$locale]?></label></th>
+                    <th scope="row"><label for="blogname"><?php _e("Select a Easy-to-read Wiki", 'hurrakify'); ?></label></th>
                     <td>
                         <select name="hurraki_tooltip_wiki" id="hurraki_tooltip_wiki">
                             <?php
@@ -46,44 +44,19 @@ function func_basic_settings_page()
                             }
                             ?>
                         </select>
-                        <p class="description" id="tagline-description"><?php echo $lang["wiki_links_desc"][$locale]?></p>
+                        <p class="description" id="tagline-description"><?php _e("Hurrakify will link to words in this Wiki.", 'hurrakify'); ?></p>
                     </td>
                 </tr>
-
-
-                <tr>
-                    <th scope="row"><label for="blogname"><?php echo $lang["tooltip_on_title"][$locale]?></label></th>
-                    <td>
-                        <select name="hurraki_tooltip_apply_to" id="hurraki_tooltip_apply_to">
-                            <option value="add_hurraki_tooltip_everything">All</option>
-                            <?php
-
-                            $types=get_post_types();
-
-                            foreach ($types as $key => $value) {
-                                if($hurraki_tooltip_apply_to==$key){
-                                    echo '<option value="'.$key.'" selected="selected">'.ucfirst($value).'</option>';
-                                }else{
-                                    echo '<option value="'.$key.'">'.ucfirst($value).'</option>';
-                                }
-                            }
-                            ?>
-                        </select>
-                        <p class="description" id="tagline-description"><?php echo $lang["tooltip_on_desc"][$locale]?></p>
-                    </td>
-                </tr>
-
-
                 <tr valign="top">
-                    <th scope="row"><?php echo $lang["max_limit"][$locale]?></th>
+                    <th scope="row"><?php _e("Maximum Tooltips", 'hurrakify'); ?></th>
                     <td>
                         <input name="hurraki_tooltip_max_word" type="text" value="<?php echo get_option('hurraki_tooltip_max_word',10); ?>" size="2" />
-                        <p class="description" id="tagline-description"><?php echo $lang["max_limit_descrip"][$locale]?></p>
+                        <p class="description" id="tagline-description"><?php _e("How many words should Hurrakify link at most? (Default setting is 10)", 'hurrakify'); ?></p>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes"></p>
+            <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'hurrakify'); ?>"></p>
         </form>
     </div>
 <?php
@@ -93,7 +66,7 @@ function func_basic_settings_page()
 function hurraki_tooltip_checkDate__()
 {
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    if (is_plugin_active('Hurrakify/hurrakify.php')){
+    if (is_plugin_active(dirname( plugin_basename(__FILE__) ) . '/hurrakify.php')){
 
         $hurraki_tooltip_key_words_last_update_time=get_option('hurraki_tooltip_key_words_last_update_time');
         $date1 = new DateTime(date('Y-m-d'));
@@ -154,4 +127,3 @@ function get_data_url($url)
 
     return $curl_response;
 }
-?>
