@@ -100,7 +100,7 @@ Hurrakify holt die Wörter aus dem jeweiligem [Deutschen](http://www.hurraki.de)
 Bei [Github](https://github.com/HepHepHurra/Hurrakify/issues) den Fehler unter dem Punkt `Issue` melden
 
 = Ich bin Programmierer und möchte Hurrakify verbessern =
-Den Code für Hurrakify gibt es bei [Github](https://github.com/HepHepHurra/Hurrakify)
+Den Code für Hurrakify gibt es bei [Github](https://github.com/HepHepHurra/Hurrakifyit stat )
 
 == Changelog ==
 
