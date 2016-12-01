@@ -97,10 +97,10 @@ Und wie viele Tooltips pro Seite maximal angezeigt werden sollen.
 Hurrakify holt die Wörter aus dem jeweiligem [Deutschen](http://www.hurraki.de), [Englischen](http://hurraki.org/english/) oder [Spanischen](http://hurraki.org/espanol/) Lexikon. Je nach dem was in den Einstellungen angegeben ist. Gibt es das Wort im Lexikon nicht, wird auch kein Tooltip hinzugefügt. Alle können neue Artikel im Wörterbuch anlegen. Damit das Wort von Hurrakify gefunden wird, muss es im jeweiligen Wiki in der Kategorie "Alle Wörter" hinzugefügt werden.
 
 = Ich habe einen Fehler im Plugin entdeckt =
-Bei [Github](https://github.com/Hurraki/Hurrakify/issues) den Fehler unter dem Punkt `Issue` melden
+Bei [Github](https://github.com/HepHepHurra/Hurrakify/issues) den Fehler unter dem Punkt `Issue` melden
 
 = Ich bin Programmierer und möchte Hurrakify verbessern =
-Den Code für Hurrakify gibt es bei [Github](https://github.com/Hurraki/Hurrakify) 
+Den Code für Hurrakify gibt es bei [Github](https://github.com/HepHepHurra/Hurrakify)
 
 == Changelog ==
 
