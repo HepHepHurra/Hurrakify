@@ -68,6 +68,7 @@ function register_hurraki_tooltip() {
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_en');
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_eo');
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_de');
+    register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_ma');	
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_last_update_time');
 }
 
