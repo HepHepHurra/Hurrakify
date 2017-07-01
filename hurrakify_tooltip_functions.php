@@ -74,7 +74,7 @@ function hurraki_tooltip_checkDate__()
         $interval = $date1->diff($date2);
         $daysGap=($interval->y * 365)+($interval->m * 30)+$interval->d;
 
-        if($daysGap>20){
+        if($daysGap>1){
             hurraki_tooltip_update_wiki_fields();
         }
     }
@@ -106,6 +106,14 @@ function hurraki_tooltip_update_wiki_fields()
     }
 
     update_option('hurraki_tooltip_key_words_eo',json_encode($words_eo));
+
+    $words_ma=array();
+    $hurraki_tooltip_key_words_ma=json_decode(get_data_url("http://hurraki.org/magyar/w/api.php?action=parse&page=Hurraki:_Szavak_A-t%C3%B3l_ZS-ig&prop=links&format=json"), true);
+    foreach ($hurraki_tooltip_key_words_ma["parse"]["links"] as $_v) {
+        $words_ma[]=$_v["*"];
+    }
+
+    update_option('hurraki_tooltip_key_words_ma',json_encode($words_ma));	
 
     update_option('hurraki_tooltip_key_words_last_update_time',date('Y-m-d'));
 }
