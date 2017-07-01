@@ -20,6 +20,12 @@ $lang["wiki_links"]["de"]["url"] = "http://hurraki.de";
 $lang["wiki_links"]["de"]["master_url"] = "http://hurraki.de";
 $lang["wiki_links"]["de"]["api_url"] = "http://hurraki.de/w/api.php?action=parse&format=json&prop=text&section=0&noimages&disablepp&page=";
 
+$lang["wiki_links"]["ma"] = array();
+$lang["wiki_links"]["ma"]["title"] = "Hungarian";
+$lang["wiki_links"]["ma"]["url"] = "http://hurraki.org/magyar";
+$lang["wiki_links"]["ma"]["master_url"] = "http://hurraki.org";
+$lang["wiki_links"]["ma"]["api_url"] = "http://hurraki.org/magyar/w/api.php?action=parse&format=json&prop=text&section=0&noimages&disablepp&page=";
+
 
 $lang["read_more"] = array();
 $lang["read_more"]["en"] = "more";
