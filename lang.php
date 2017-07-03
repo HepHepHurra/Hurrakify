@@ -31,3 +31,4 @@ $lang["read_more"] = array();
 $lang["read_more"]["en"] = "more";
 $lang["read_more"]["eo"] = "continuar";
 $lang["read_more"]["de"] = "mehr";
+$lang["read_more"]["ma"] = "több";
