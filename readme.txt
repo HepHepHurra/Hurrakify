@@ -3,7 +3,7 @@ Contributors:Hep Hep Hurra GbR
 Donate link: http://www.hephephurra.de
 Tags: Leichte Sprache, wiki, Wörterbuch, Easy to read, BITV, lenguaje llano, Plain Language, Barrierefreiheit, Inklusion, Inclusion; OER, Hurraki, Lexikon, lexicon, Léxico
 Requires at least: 2.0.2
-Tested up to: 4.4
+Tested up to: 4.8
 Stable tag: trunk
 License: GPLv2
 
