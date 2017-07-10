@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Hurrakify-Raymond
+Plugin Name: Hurrakify
 Description: Hurrakify links automatically difficult words to entries in plain language in the Hurraki dictionary. Hurrakify adds to every hard to read word a tooltip.
 Author: Hep Hep Hurra (HHH)
 Plugin URI: https://wordpress.org/plugins/hurrakify/
