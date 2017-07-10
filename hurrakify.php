@@ -116,7 +116,6 @@ function theme_slug_filter_the_content($content)
 
     }
 
-        echo "BBB".$Counter;
     return $content;
 }
 
