@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Hurrakify
+Plugin Name: Hurrakify-Raymond
 Description: Hurrakify links automatically difficult words to entries in plain language in the Hurraki dictionary. Hurrakify adds to every hard to read word a tooltip.
 Author: Hep Hep Hurra (HHH)
 Plugin URI: https://wordpress.org/plugins/hurrakify/
@@ -98,20 +98,25 @@ function theme_slug_filter_the_content($content)
     $limit = get_option('hurraki_tooltip_max_word', 10);
 
     $foundCounter = 0;
+    $Counter = 0;
+
 
     foreach ($keywords as $keyword) {
 
-        if ($foundCounter >= $limit) {
+        if ($Counter >= $limit) {
             break;
         }
 
         $search = '/\b(' . addcslashes(addslashes($keyword), '/') . ')\b(?!(?:[^<]+)?>)/i';
         $replace = "<span class='hurraki_tooltip' data-title='\$0' style='border-bottom:2px dotted #888;'>\$0</span>";
-        $content = preg_replace($search, $replace, $content, 1, $foundCounter);
-        $foundCounter++;
+        $content = preg_replace($search, $replace, $content, 1,$foundCounter);  
+        if($foundCounter)
+          $Counter++;
+
 
     }
 
+        echo "BBB".$Counter;
     return $content;
 }
 
