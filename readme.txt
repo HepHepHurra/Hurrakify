@@ -3,107 +3,104 @@ Contributors:Hep Hep Hurra GbR
 Donate link: http://www.hephephurra.de
 Tags: Leichte Sprache, wiki, Wörterbuch, Easy to read, BITV, lenguaje llano, Plain Language, Barrierefreiheit, Inklusion, Inclusion; OER, Hurraki, Lexikon, lexicon, Léxico
 Requires at least: 2.0.2
-Tested up to: 4.8
+Tested up to: 4.4
 Stable tag: trunk
 License: GPLv2
 
-Hurrakify adds tooltips in Plain Language to your blog articles. 
+
+Hurrakify verlinkt einfach und bequem, Wörter mit Artikeln in Leichter Sprache aus dem Hurraki Wörterbuch.
 
 == Description ==
 
-Hurrakify adds tooltips to articles. That means: Hard-to-read word are underlinded. Moving over with the cursor shows a explanation about the word. Hurrakify gets its information from the [Hurraki](http://hurraki.org/english) Plain Language Lexicon. Install and activate. Hurrakify does the rest.
-
+Hurrakify ergänzt Artikel mit Tooltips. Das heißt: Schwere Wörter im Artikel bekommen eine gestrichelte Linie. Fährt man mit der Maus über das Wort, bekommt man eine Leichte Sprache Erklärung zu diesem Wort. Hurrakify holt sich die Leichte Sprache Informationen aus dem [Hurraki](http://www.hurraki.de) Lexikon in Leichter Sprache. Installieren und aktivieren. Den Rest erledigt Hurrakify.
 
 [youtube https://www.youtube.com/watch?v=bs9Rs7Yf2Lw]
 
-To see the Plugin in action have a look at the [Hurraki Blog](http://www.hurraki.de/blog/).
+Das installierte Plugin in Aktion kann im [Hurraki Blog](http://www.hurraki.de/blog/) angeschaut werden.
 
 
 
-Hurraki is a dictionary in Plain Language.
-Many written and spoken words are complicated.
-Some people don’t understand difficult words and text.
-With Plain Language, everybody can understand.
-For anyone – free to use.
-Plain Language should be available in many languages.
-Join Hurraki and help people to understand. 
+Hurraki ist ein Wörterbuch für Leichte Sprache.
+Viele Menschen reden umständlich. Nicht jeder versteht das.
+Die Wörter bei Hurraki soll jeder verstehen können.
+Niemand soll ausgegrenzt werden.
+Alle haben ein Recht auf Information.
+Hurraki ist kostenlos
+Hurraki ist für alle.
+Jeder darf die Wörter lesen. 
+Jeder kann mitmachen. 
 
 [youtube https://www.youtube.com/watch?v=WIAE1ipCoWQ]
 
 
 == Installation ==
 
-There are two ways to install Hurrakify.
+Es gibt zwei Möglichkeiten Hurrakify zu installieren.
 
-First Option:
+Erste Möglichkeit:
 
-1. In the WordPress installation click on `Plugin` 
+1. In der Wordpress Installation auf `Plugin` klicken
 
-2. Click `Install` 
+2. Auf `Installieren` klicken
 
-3. In the search field, type `Hurrakify` 
+3. Im Suchfeld `Hurrakify` eintippen
 
-4. Click `Install` 
+4. Auf `Installieren` klicken
 
 
 Zweite Möglichket:
 
-1. Download Plugin from WordPress.org
+1. Plugin von Wordpress.org herunterladen
 
-2. Unzip the zip file
+2. Die Zip Datei entpacken
 
-3. Upload the complete folder to `/wp-content/plugins/` 
+3. Den kompletten Ordner in den Ordner `/wp-content/plugins/` hochladen
 
 
-Then go to the menu item Plugins to activate Hurrakify.
+Danach unter dem Menüpunkt `Plugins` Hurrakify aktivieren.
 
-Now a new menu item with the name Hurrakify appears.
+Jetzt erscheint ein neuer Menüpunkt mit dem Namen Hurrakify.
 
 [youtube https://www.youtube.com/watch?v=EHcKjD330nQ]
 
 
 == Screenshots ==
-1. Example article. Hurrakify automatically underlines a word with a dashed line. If the reader moves the mouse over the word, a tooltip window opens.
-2. Hurrakify settings. Here Hurrakify can be adapted to your own needs.
+1. Beispielartikel. Hurrakify hat automatisch ein Wort mit einer gestrichelten Linie unterstrichen. Fährt der Leser mit der Maus über das Wort, öffnet sich ein Tooltipfenster. 
+2. Hurrakify Einstellungen. Hier kann Hurrakify an die eigenen Bedürfnisse angepaßt werden.
 
 
 == Upgrade Notice ==
 
 
 
-== Settings ==
+== Einstellungen ==
 
-There are a few settings for Hurrakify.
+Für Hurrakify gibt es ein paar Einstellungen.
 
-After the installation, there is the new menu item Hurrakify.
+Nach der Installation gibt es den neuen Menüpunkt Hurrakify.
 
-The following settings are possible:
+Folgende Einstellungen sind möglich:
 
-Where should Hurrakify get the tooltips from?
+Woher soll Hurrakify die Tooltips holen?
 
-From the [German](http://www.hurraki.de), [English](http://hurraki.org/english/), [Hungarian](http://hurraki.org/magyar/) or [Spanish](http://hurraki.org/espanol/) Dictionary.
+Aus dem [Deutschen](http://www.hurraki.de), [Englischen](http://hurraki.org/english/) oder [Spanischen](http://hurraki.org/espanol/) Wörterbuch.
 
-In addition, you can adjust in which areas the tooltips should be added to the blog.
+Außerdem kann man einstellen in welchen Bereichen die Tooltips dem Blog hinzugefügt werden soll.
 
-And how many tooltips per page should be displayed at maximum.
-
-
-[youtube https://www.youtube.com/watch?v=EHcKjD330nQ]
+Und wie viele Tooltips pro Seite maximal angezeigt werden sollen.
 
 
 
 == Frequently Asked Questions ==
 
-= Hurrakify does not add a Tooltip =
-Hurrakify retrieves the words from the respective [German](http://www.hurraki.de), [English](http://hurraki.org/english/), Spanish(http://hurraki.org/espanol/) or [Hungarian](http://hurraki.org/magyar/) lexicon. Depending on what is specified in the settings. If the word does not exist in the dictionary, no tooltip is added. Anyone can create new articles in the dictionary. Add the word in the respective Wiki in the “All Words” category, so that Hurrakify can find the word.
+= Hurrakify fügt keinen Tooltip hinzu =
+Hurrakify holt die Wörter aus dem jeweiligem [Deutschen](http://www.hurraki.de), [Englischen](http://hurraki.org/english/) oder [Spanischen](http://hurraki.org/espanol/) Lexikon. Je nach dem was in den Einstellungen angegeben ist. Gibt es das Wort im Lexikon nicht, wird auch kein Tooltip hinzugefügt. Alle können neue Artikel im Wörterbuch anlegen. Damit das Wort von Hurrakify gefunden wird, muss es im jeweiligen Wiki in der Kategorie "Alle Wörter" hinzugefügt werden.
 
+= Ich habe einen Fehler im Plugin entdeckt =
+Bei [Github](https://github.com/Hurraki/Hurrakify/issues) den Fehler unter dem Punkt `Issue` melden
 
-= Ich have discovered an error in the plugin =
-Report the error at [Github](https://github.com/HepHepHurra/Hurrakify/issues) under point `Issue` 
-
-
-= I am a programmer and would like to improve Hurrakify =
-The code for Hurrakify is available at [Github](https://github.com/HepHepHurra/Hurrakify)
+= Ich bin Programmierer und möchte Hurrakify verbessern =
+Den Code für Hurrakify gibt es bei [Github](https://github.com/Hurraki/Hurrakify) 
 
 == Changelog ==
 
