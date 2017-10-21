@@ -4,7 +4,7 @@ Plugin Name: Hurrakify
 Description: Hurrakify links automatically difficult words to entries in plain language in the Hurraki dictionary. Hurrakify adds to every hard to read word a tooltip.
 Author: Hep Hep Hurra (HHH)
 Plugin URI: https://wordpress.org/plugins/hurrakify/
-Version: 2.2
+Version: 2.3
 Text Domain: hurrakify
 */
 
@@ -68,7 +68,8 @@ function register_hurraki_tooltip() {
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_en');
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_eo');
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_de');
-    register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_ma');	
+    register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_ma');
+	register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_it');
     register_setting('hurraki-settings-group2', 'hurraki_tooltip_key_words_last_update_time');
 }
 
