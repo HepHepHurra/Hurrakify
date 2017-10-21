@@ -1,22 +1,23 @@
 === hurrakify ===
 Contributors:Hep Hep Hurra GbR
-Donate link: http://www.hephephurra.de
+Donate link: https://www.hephephurra.de
 Tags: Leichte Sprache, wiki, Wörterbuch, Easy to read, BITV, lenguaje llano, Plain Language, Barrierefreiheit, Inklusion, Inclusion; OER, Hurraki, Lexikon, lexicon, Léxico
 Requires at least: 2.0.2
-Tested up to: 4.8
+Tested up to: 4.8.2
 Stable tag: trunk
-License: GPLv2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Hurrakify adds tooltips in Plain Language to your blog articles. 
 
 == Description ==
 
-Hurrakify adds tooltips to articles. That means: Hard-to-read word are underlinded. Moving over with the cursor shows a explanation about the word. Hurrakify gets its information from the [Hurraki](http://hurraki.org/english) Plain Language Lexicon. Install and activate. Hurrakify does the rest.
+Hurrakify adds tooltips to articles. That means: Hard-to-read word are underlinded. Moving over with the cursor shows a explanation about the word. Hurrakify gets its information from the [Hurraki](https://hurraki.org/english) Plain Language Lexicon. Install and activate. Hurrakify does the rest.
 
 
 [youtube https://www.youtube.com/watch?v=bs9Rs7Yf2Lw]
 
-To see the Plugin in action have a look at the [Hurraki Blog](http://www.hurraki.de/blog/).
+To see the Plugin in action have a look at the [Hurraki Blog](https://www.hurraki.de/blog/).
 
 
 
@@ -81,7 +82,7 @@ The following settings are possible:
 
 Where should Hurrakify get the tooltips from?
 
-From the [German](http://www.hurraki.de), [English](http://hurraki.org/english/), [Hungarian](http://hurraki.org/magyar/) or [Spanish](http://hurraki.org/espanol/) Dictionary.
+From the [German](https://www.hurraki.de), [English](http://hurraki.org/english/), [Hungarian](https://hurraki.org/magyar/), [Italian](https://hurraki.org/italiano) or [Spanish](https://hurraki.org/espanol/) Dictionary.
 
 In addition, you can adjust in which areas the tooltips should be added to the blog.
 
@@ -95,7 +96,7 @@ And how many tooltips per page should be displayed at maximum.
 == Frequently Asked Questions ==
 
 = Hurrakify does not add a Tooltip =
-Hurrakify retrieves the words from the respective [German](http://www.hurraki.de), [English](http://hurraki.org/english/), [Spanish](http://hurraki.org/espanol/) or [Hungarian](http://hurraki.org/magyar/) lexicon. Depending on what is specified in the settings. If the word does not exist in the dictionary, no tooltip is added. Anyone can create new articles in the dictionary. Add the word in the respective Wiki in the “All Words” category, so that Hurrakify can find the word.
+Hurrakify retrieves the words from the respective [German](https://www.hurraki.de), [English](https://hurraki.org/english/), [Spanish](https://hurraki.org/espanol/) or [Hungarian](https://hurraki.org/magyar/) lexicon. Depending on what is specified in the settings. If the word does not exist in the dictionary, no tooltip is added. Anyone can create new articles in the dictionary. Add the word in the respective Wiki in the “All Words” category, so that Hurrakify can find the word.
 
 
 = I have discovered an error in the plugin =
@@ -107,4 +108,14 @@ The code for Hurrakify is available at [Github](https://github.com/HepHepHurra/H
 
 == Changelog ==
 
-changelog
+= 2.3 =
+* Added Italian Plain Language dictionary
+* Changed API to https
+
+= 2.2 =
+* Added Hungarian Plain Language dictionary 
+* Fixed one bug
+ 
+= 2.1 =
+* Added English Plain Language dictionary 
+* Added Spanish Plain Language dictionary 
