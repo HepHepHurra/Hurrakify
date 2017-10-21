@@ -84,7 +84,7 @@ function hurraki_tooltip_update_wiki_fields()
 {
 
     $words_de=array();
-    $hurraki_tooltip_key_words_de=json_decode(get_data_url("http://hurraki.de/w/api.php?action=parse&page=Hurraki:Artikel_von_A_bis_Z&prop=links&format=json"), true);
+    $hurraki_tooltip_key_words_de=json_decode(get_data_url("https://hurraki.de/w/api.php?action=parse&page=Hurraki:Artikel_von_A_bis_Z&prop=links&format=json"), true);
     foreach ($hurraki_tooltip_key_words_de["parse"]["links"] as $_v) {
         $words_de[]=$_v["*"];
     }
@@ -92,7 +92,7 @@ function hurraki_tooltip_update_wiki_fields()
     update_option('hurraki_tooltip_key_words_de',json_encode($words_de));
 
     $words_en=array();
-    $hurraki_tooltip_key_words_en=json_decode(get_data_url("http://hurraki.org/english/w/api.php?action=parse&page=Hurraki:Articles_A_to_Z&prop=links&format=json"), true);
+    $hurraki_tooltip_key_words_en=json_decode(get_data_url("https://hurraki.org/english/w/api.php?action=parse&page=Hurraki:Articles_A_to_Z&prop=links&format=json"), true);
     foreach ($hurraki_tooltip_key_words_en["parse"]["links"] as $_v) {
         $words_en[]=$_v["*"];
     }
@@ -100,7 +100,7 @@ function hurraki_tooltip_update_wiki_fields()
     update_option('hurraki_tooltip_key_words_en',json_encode($words_en));
 
     $words_eo=array();
-    $hurraki_tooltip_key_words_eo=json_decode(get_data_url("http://hurraki.org/espanol/w/api.php?action=parse&page=Hurraki:Art%C3%ADculos_de_la_A_a_la_Z&prop=links&format=json"), true);
+    $hurraki_tooltip_key_words_eo=json_decode(get_data_url("https://hurraki.org/espanol/w/api.php?action=parse&page=Hurraki:Art%C3%ADculos_de_la_A_a_la_Z&prop=links&format=json"), true);
     foreach ($hurraki_tooltip_key_words_eo["parse"]["links"] as $_v) {
         $words_eo[]=$_v["*"];
     }
@@ -108,12 +108,21 @@ function hurraki_tooltip_update_wiki_fields()
     update_option('hurraki_tooltip_key_words_eo',json_encode($words_eo));
 
     $words_ma=array();
-    $hurraki_tooltip_key_words_ma=json_decode(get_data_url("http://hurraki.org/magyar/w/api.php?action=parse&page=Hurraki:_Szavak_A-t%C3%B3l_ZS-ig&prop=links&format=json"), true);
+    $hurraki_tooltip_key_words_ma=json_decode(get_data_url("https://hurraki.org/magyar/w/api.php?action=parse&page=Hurraki:_Szavak_A-t%C3%B3l_ZS-ig&prop=links&format=json"), true);
     foreach ($hurraki_tooltip_key_words_ma["parse"]["links"] as $_v) {
         $words_ma[]=$_v["*"];
     }
 
-    update_option('hurraki_tooltip_key_words_ma',json_encode($words_ma));	
+    update_option('hurraki_tooltip_key_words_ma',json_encode($words_ma));
+
+    $words_it=array();
+    $hurraki_tooltip_key_words_it=json_decode(get_data_url("https://hurraki.org/italiano/w/api.php?action=parse&page=Hurraki:Articolo_da_A_a_Z&prop=links&format=json"), true);
+    foreach ($hurraki_tooltip_key_words_it["parse"]["links"] as $_v) {
+        $words_it[]=$_v["*"];
+    }
+
+    update_option('hurraki_tooltip_key_words_it',json_encode($words_it));	
+
 
     update_option('hurraki_tooltip_key_words_last_update_time',date('Y-m-d'));
 }
