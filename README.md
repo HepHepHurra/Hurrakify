@@ -27,9 +27,11 @@ You have a idea what Hurrakify would make better. Or you found something you don
 You are not a programmer but like the idea of Plain Language and Easy-to-read. 
 
 * You are welcome to write Easy-to-read texts
- * in [German](http://hurraki.de)
- * in [English](http://hurraki.org/english)
- * in [Spanish](http://hurraki.org/espanol)
+ * in [German](https://hurraki.de)
+ * in [English](https://hurraki.org/english)
+ * in [Spanish](https://hurraki.org/espanol)
+ * in [Hungarian](https://hurraki.org/magyar)
+ * in [Italian](https://hurraki.org/italiano)
 * You like taking pictures. There is also a Wiki for Easy-to-read pictures at [HDrei](http://hdrei.org)
 
 
