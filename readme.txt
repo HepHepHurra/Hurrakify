@@ -1,10 +1,10 @@
-=== hurrakify ===
-Contributors:Hep Hep Hurra GbR
+=== Hurrakify ===
+Contributors:Hep Hep Hurra e. V.
 Donate link: https://www.hephephurra.de
-Tags: Leichte Sprache, wiki, Wörterbuch, Easy to read, BITV, lenguaje llano, Plain Language, Barrierefreiheit, Inklusion, Inclusion; OER, Hurraki, Lexikon, lexicon, Léxico
+Tags: Leichte Sprache, wiki, Wörterbuch, Easy to read, BITV, lenguaje llano, Plain Language, Barrierefreiheit, Inklusion, Inclusion; OER, Hurraki, Lexikon, lexicon, Léxico, Deutsche Leichte Sprache, Einfache Sprache, etr
 Requires at least: 2.0.2
-Tested up to: 4.8.2
-Stable tag: trunk
+Tested up to: 6.7
+Stable tag: 8.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,7 @@ To see the Plugin in action have a look at the [Hurraki Blog](https://www.hurrak
 
 Hurraki is a dictionary in Plain Language.
 Many written and spoken words are complicated.
-Some people don’t understand difficult words and text.
+Some people don't understand difficult words and text.
 With Plain Language, everybody can understand.
 For anyone – free to use.
 Plain Language should be available in many languages.
@@ -107,6 +107,15 @@ Report the error at [Github](https://github.com/HepHepHurra/Hurrakify/issues) un
 The code for Hurrakify is available at [Github](https://github.com/HepHepHurra/Hurrakify)
 
 == Changelog ==
+
+
+= 8.0.1 =
+* Implemented semantic software versioning
+
+= 2.4 =
+* Fixed several bugs
+* Added a scheduled update event
+
 
 = 2.3 =
 * Added Italian Plain Language dictionary
